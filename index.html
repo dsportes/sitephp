@@ -4,11 +4,11 @@
 <title>Test d'envoi de mail</title>
 </head>
 <body>
-<form action="sm.php" method="get">
- 	<p>to : <input type="text" name="to" value="daniel.sportes@free.fr" /></p>
+<form action="https://localhost/alertes.php" method="post">
+	<p>pwd : <input type="text" name="pwd" value="secret" /></p>
+	<p>to : <input type="text" name="to" value="daniel.sportes@free.fr" /></p>
  	<p>sub : <input type="text" name="sub" value="Mon sujet"/></p>
- 	<p>txt : <textarea  row"10" cols="80" type="text" name="txt">Mon beau texte.</textarea></p>
- 	<input type="hidden" name="smtp" value="1"/>
+ 	<p>txt : <input type="text" name="txt" value="Mon beau texte."></textarea></p>
  	<p><input type="submit" value="Envoyer"></p>
 </form>
 </body>

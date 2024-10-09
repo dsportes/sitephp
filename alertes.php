@@ -11,8 +11,8 @@ require 'vendor/autoload.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-$arg = $_GET;
-// $arg = array('to' => 'daniel.sportes@free.fr', 'sub' => 'sujet 1', 'txt' => 'texte 1' );
+$arg = $_POST;
+// $arg = array('pwd'=> 'monsecret', 'to' => 'daniel.sportes@free.fr', 'sub' => 'sujet 2', 'txt' => 'texte 1' );
 
 try {
     date_default_timezone_set('Europe/Paris');
@@ -23,8 +23,8 @@ try {
     $mail->isSMTP();                                     //Send using SMTP
     $mail->Host       = 'smtp.laposte.net';              //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                            //Enable SMTP authentication
-    $mail->Username   = 'daniel.sportes';                //SMTP username
-    $mail->Password   = 'mon mot de passe';              //SMTP password
+    $mail->Username   = 'daniel.sportes';                //SMTP username                   //SMTP password
+    $mail->Password   = $arg['pwd'];                     //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;     //Enable implicit TLS encryption
     $mail->Port       = 465;                             //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
