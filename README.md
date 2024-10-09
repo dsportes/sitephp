@@ -10,9 +10,9 @@ Crée le `composer.json` et `composer.lock`.
 
 Lancement du test: décommenter la ligne `$arg=array(...)`
 
-    php alertes.php
+    php.exe alertes.php
 
-La page `index.html` permet de tester `sm.php` sur un site Web:
+La page `index.html` permet de tester `alertes.php` sur un site Web:
 - lancer nginx
 - dans un browser: https://test.sportes.fr/index.html
 - vérification de php: https://test.sportes.fr/bonjour.php
